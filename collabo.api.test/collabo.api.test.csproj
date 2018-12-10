@@ -12,4 +12,10 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\collabo.common\collabo.common.csproj" />
+    <ProjectReference Include="..\collabo.api\collabo.api.csproj" />
+    <ProjectReference Include="..\collabo.data\collabo.data.csproj" />
+  </ItemGroup>
+
 </Project>
