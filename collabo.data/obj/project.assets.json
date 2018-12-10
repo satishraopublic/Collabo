@@ -25,6 +25,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "collabo.common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/collabo.common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/collabo.common.dll": {}
+        }
       }
     }
   },
@@ -169,11 +179,17 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "collabo.common/1.0.0": {
+      "type": "project",
+      "path": "../collabo.common/collabo.common.csproj",
+      "msbuildProject": "../collabo.common/collabo.common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "collabo.common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -206,7 +222,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "M:\\pocroot\\Collabo\\collabo.common\\collabo.common.csproj": {
+              "projectPath": "M:\\pocroot\\Collabo\\collabo.common\\collabo.common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

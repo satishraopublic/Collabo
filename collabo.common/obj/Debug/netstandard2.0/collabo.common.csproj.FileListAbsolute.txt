@@ -1,0 +1,9 @@
+M:\pocroot\Collabo\collabo.common\bin\Debug\netstandard2.0\collabo.common.deps.json
+M:\pocroot\Collabo\collabo.common\bin\Debug\netstandard2.0\collabo.common.dll
+M:\pocroot\Collabo\collabo.common\bin\Debug\netstandard2.0\collabo.common.pdb
+M:\pocroot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.csprojAssemblyReference.cache
+M:\pocroot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.csproj.CoreCompileInputs.cache
+M:\pocroot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.AssemblyInfoInputs.cache
+M:\pocroot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.AssemblyInfo.cs
+M:\pocroot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.dll
+M:\pocroot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.pdb
