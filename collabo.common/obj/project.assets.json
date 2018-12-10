@@ -177,31 +177,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\srao\\.nuget\\packages\\": {},
+    "C:\\Users\\Satish\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "M:\\pocroot\\Collabo\\collabo.common\\collabo.common.csproj",
+      "projectUniqueName": "D:\\POCRoot\\Collabo\\collabo.common\\collabo.common.csproj",
       "projectName": "collabo.common",
-      "projectPath": "M:\\pocroot\\Collabo\\collabo.common\\collabo.common.csproj",
-      "packagesPath": "C:\\Users\\srao\\.nuget\\packages\\",
-      "outputPath": "M:\\pocroot\\Collabo\\collabo.common\\obj\\",
+      "projectPath": "D:\\POCRoot\\Collabo\\collabo.common\\collabo.common.csproj",
+      "packagesPath": "C:\\Users\\Satish\\.nuget\\packages\\",
+      "outputPath": "D:\\POCRoot\\Collabo\\collabo.common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\srao\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Satish\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "\\\\dev-029774\\nuget": {},
+        "http://raosystemsinc-1/MyNuget/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

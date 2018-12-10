@@ -10,3 +10,15 @@ M:\pocroot\Collabo\collabo.data\obj\Debug\netstandard2.0\collabo.data.AssemblyIn
 M:\pocroot\Collabo\collabo.data\obj\Debug\netstandard2.0\collabo.data.csproj.CopyComplete
 M:\pocroot\Collabo\collabo.data\obj\Debug\netstandard2.0\collabo.data.dll
 M:\pocroot\Collabo\collabo.data\obj\Debug\netstandard2.0\collabo.data.pdb
+D:\POCRoot\Collabo\collabo.data\bin\Debug\netstandard2.0\collabo.data.deps.json
+D:\POCRoot\Collabo\collabo.data\bin\Debug\netstandard2.0\collabo.data.dll
+D:\POCRoot\Collabo\collabo.data\bin\Debug\netstandard2.0\collabo.data.pdb
+D:\POCRoot\Collabo\collabo.data\bin\Debug\netstandard2.0\collabo.common.dll
+D:\POCRoot\Collabo\collabo.data\bin\Debug\netstandard2.0\collabo.common.pdb
+D:\POCRoot\Collabo\collabo.data\obj\Debug\netstandard2.0\collabo.data.csprojAssemblyReference.cache
+D:\POCRoot\Collabo\collabo.data\obj\Debug\netstandard2.0\collabo.data.csproj.CoreCompileInputs.cache
+D:\POCRoot\Collabo\collabo.data\obj\Debug\netstandard2.0\collabo.data.AssemblyInfoInputs.cache
+D:\POCRoot\Collabo\collabo.data\obj\Debug\netstandard2.0\collabo.data.AssemblyInfo.cs
+D:\POCRoot\Collabo\collabo.data\obj\Debug\netstandard2.0\collabo.data.csproj.CopyComplete
+D:\POCRoot\Collabo\collabo.data\obj\Debug\netstandard2.0\collabo.data.dll
+D:\POCRoot\Collabo\collabo.data\obj\Debug\netstandard2.0\collabo.data.pdb

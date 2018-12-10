@@ -7,7 +7,7 @@ public interface  ICollaboRepository{
     List<GroupViewDTO> ShowAllGroups();
 
 //USER
-    UserViewDTO Register(string firstName, string lastName, string userName, string password, string confirmPassword, string question, string answer);
+    UserViewDTO Register(string firstName, string lastName, string userName, string password, string confirmPassword, string emailId, string question, string answer);
 
 //SESSION
     Session Login(string userName, string password);

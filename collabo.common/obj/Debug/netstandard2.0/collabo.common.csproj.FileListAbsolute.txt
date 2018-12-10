@@ -7,3 +7,12 @@ M:\pocroot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.Assemb
 M:\pocroot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.AssemblyInfo.cs
 M:\pocroot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.dll
 M:\pocroot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.pdb
+D:\POCRoot\Collabo\collabo.common\bin\Debug\netstandard2.0\collabo.common.deps.json
+D:\POCRoot\Collabo\collabo.common\bin\Debug\netstandard2.0\collabo.common.dll
+D:\POCRoot\Collabo\collabo.common\bin\Debug\netstandard2.0\collabo.common.pdb
+D:\POCRoot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.csprojAssemblyReference.cache
+D:\POCRoot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.csproj.CoreCompileInputs.cache
+D:\POCRoot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.AssemblyInfoInputs.cache
+D:\POCRoot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.AssemblyInfo.cs
+D:\POCRoot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.dll
+D:\POCRoot\Collabo\collabo.common\obj\Debug\netstandard2.0\collabo.common.pdb
