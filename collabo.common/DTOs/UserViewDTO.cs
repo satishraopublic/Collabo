@@ -1,5 +1,7 @@
 using System;
 
+namespace Collabo.Common.DTOs
+{
 public class UserViewDTO{
     public UserViewDTO(User newUser)
     {
@@ -19,4 +21,5 @@ public class UserViewDTO{
     public DateTime CreatedOn { get; set; }
     public DateTime ModifiedOn { get; set; }
 
+}
 }

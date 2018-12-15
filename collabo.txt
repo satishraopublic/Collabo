@@ -1,0 +1,19 @@
+- Login
+- Get Channels for Member
+- Get Online Users
+- Send Message to Online User
+	- Create Temp channel with User
+- Send Message to Channel
+- Get all messages from Channel
+- Get unread messages from Channel
+- Create channel 
+- Add user to Channel
+- Remove user from Channel
+
+
+- Login
+- Start Conversation
+- Add user to Conversation
+- Remove user from Conversation
+- Add message to Conversation//
+- End Conversation
