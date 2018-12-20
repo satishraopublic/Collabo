@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="RestSharp" Version="106.5.4"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\collabo.common\collabo.common.csproj" />
+  </ItemGroup>
+
+</Project>
