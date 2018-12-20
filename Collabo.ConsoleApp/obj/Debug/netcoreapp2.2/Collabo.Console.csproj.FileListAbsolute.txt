@@ -1,0 +1,16 @@
+D:\POCRoot\Collabo\collabo.consoleapp\obj\Debug\netcoreapp2.2\Collabo.Console.csprojAssemblyReference.cache
+D:\POCRoot\Collabo\collabo.consoleapp\obj\Debug\netcoreapp2.2\Collabo.Console.csproj.CoreCompileInputs.cache
+D:\POCRoot\Collabo\collabo.consoleapp\obj\Debug\netcoreapp2.2\Collabo.Console.AssemblyInfoInputs.cache
+D:\POCRoot\Collabo\collabo.consoleapp\obj\Debug\netcoreapp2.2\Collabo.Console.AssemblyInfo.cs
+D:\POCRoot\Collabo\collabo.consoleapp\bin\Debug\netcoreapp2.2\Collabo.Console.deps.json
+D:\POCRoot\Collabo\collabo.consoleapp\bin\Debug\netcoreapp2.2\Collabo.Console.runtimeconfig.json
+D:\POCRoot\Collabo\collabo.consoleapp\bin\Debug\netcoreapp2.2\Collabo.Console.runtimeconfig.dev.json
+D:\POCRoot\Collabo\collabo.consoleapp\bin\Debug\netcoreapp2.2\Collabo.Console.dll
+D:\POCRoot\Collabo\collabo.consoleapp\bin\Debug\netcoreapp2.2\Collabo.Console.pdb
+D:\POCRoot\Collabo\collabo.consoleapp\bin\Debug\netcoreapp2.2\collabo.common.dll
+D:\POCRoot\Collabo\collabo.consoleapp\bin\Debug\netcoreapp2.2\collabo.common.pdb
+D:\POCRoot\Collabo\collabo.consoleapp\obj\Debug\netcoreapp2.2\Collabo.Console.csproj.CopyComplete
+D:\POCRoot\Collabo\collabo.consoleapp\obj\Debug\netcoreapp2.2\Collabo.Console.dll
+D:\POCRoot\Collabo\collabo.consoleapp\obj\Debug\netcoreapp2.2\Collabo.Console.pdb
+D:\POCRoot\Collabo\collabo.consoleapp\bin\Debug\netcoreapp2.2\collabo.clientservices.dll
+D:\POCRoot\Collabo\collabo.consoleapp\bin\Debug\netcoreapp2.2\collabo.clientservices.pdb

@@ -1,0 +1,66 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "e01184e3b2b9e316f086cff0d967e124e2372cee"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "Collabo.Console/1.0.0": {
+        "dependencies": {
+          "collabo.clientservices": "1.0.0",
+          "collabo.common": "1.0.0"
+        },
+        "runtime": {
+          "Collabo.Console.dll": {}
+        }
+      },
+      "RestSharp/106.5.4": {
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {
+            "assemblyVersion": "106.5.4.0",
+            "fileVersion": "106.5.4.0"
+          }
+        }
+      },
+      "collabo.clientservices/1.0.0": {
+        "dependencies": {
+          "collabo.common": "1.0.0",
+          "RestSharp": "106.5.4"
+        },
+        "runtime": {
+          "collabo.clientservices.dll": {}
+        }
+      },
+      "collabo.common/1.0.0": {
+        "runtime": {
+          "collabo.common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Collabo.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RestSharp/106.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YaGn6olg2GD0gLy7YDG1FsSnC6TBwgn/zZSONiOj7hPFJJ0Q+k2hBogyalUXkodihVa0ugRwCqSPCiqdNyFKzA==",
+      "path": "restsharp/106.5.4",
+      "hashPath": "restsharp.106.5.4.nupkg.sha512"
+    },
+    "collabo.clientservices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "collabo.common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

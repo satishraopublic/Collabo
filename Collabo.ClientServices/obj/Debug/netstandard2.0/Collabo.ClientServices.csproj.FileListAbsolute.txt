@@ -1,0 +1,12 @@
+D:\POCRoot\Collabo\collabo.clientservices\obj\Debug\netstandard2.0\Collabo.ClientServices.csprojAssemblyReference.cache
+D:\POCRoot\Collabo\collabo.clientservices\obj\Debug\netstandard2.0\Collabo.ClientServices.csproj.CoreCompileInputs.cache
+D:\POCRoot\Collabo\collabo.clientservices\obj\Debug\netstandard2.0\Collabo.ClientServices.AssemblyInfoInputs.cache
+D:\POCRoot\Collabo\collabo.clientservices\obj\Debug\netstandard2.0\Collabo.ClientServices.AssemblyInfo.cs
+D:\POCRoot\Collabo\collabo.clientservices\bin\Debug\netstandard2.0\Collabo.ClientServices.deps.json
+D:\POCRoot\Collabo\collabo.clientservices\bin\Debug\netstandard2.0\Collabo.ClientServices.dll
+D:\POCRoot\Collabo\collabo.clientservices\bin\Debug\netstandard2.0\Collabo.ClientServices.pdb
+D:\POCRoot\Collabo\collabo.clientservices\bin\Debug\netstandard2.0\collabo.common.dll
+D:\POCRoot\Collabo\collabo.clientservices\bin\Debug\netstandard2.0\collabo.common.pdb
+D:\POCRoot\Collabo\collabo.clientservices\obj\Debug\netstandard2.0\Collabo.ClientServices.csproj.CopyComplete
+D:\POCRoot\Collabo\collabo.clientservices\obj\Debug\netstandard2.0\Collabo.ClientServices.dll
+D:\POCRoot\Collabo\collabo.clientservices\obj\Debug\netstandard2.0\Collabo.ClientServices.pdb

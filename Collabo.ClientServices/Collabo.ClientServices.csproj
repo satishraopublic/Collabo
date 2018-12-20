@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\collabo.common\collabo.common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="restsharp" Version="106.5.4" />
+  </ItemGroup>
+
+</Project>

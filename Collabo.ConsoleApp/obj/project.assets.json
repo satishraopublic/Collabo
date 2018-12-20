@@ -216,6 +216,30 @@
         "runtime": {
           "lib/netstandard2.0/RestSharp.dll": {}
         }
+      },
+      "collabo.clientservices/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "collabo.common": "1.0.0",
+          "restsharp": "106.5.4"
+        },
+        "compile": {
+          "bin/placeholder/collabo.clientservices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/collabo.clientservices.dll": {}
+        }
+      },
+      "collabo.common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/collabo.common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/collabo.common.dll": {}
+        }
       }
     }
   },
@@ -702,12 +726,23 @@
         "restsharp.106.5.4.nupkg.sha512",
         "restsharp.nuspec"
       ]
+    },
+    "collabo.clientservices/1.0.0": {
+      "type": "project",
+      "path": "../collabo.clientservices/collabo.clientservices.csproj",
+      "msbuildProject": "../collabo.clientservices/collabo.clientservices.csproj"
+    },
+    "collabo.common/1.0.0": {
+      "type": "project",
+      "path": "../collabo.common/collabo.common.csproj",
+      "msbuildProject": "../collabo.common/collabo.common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.NETCore.App >= 2.2.0",
-      "RestSharp >= 106.5.4"
+      "collabo.clientservices >= 1.0.0",
+      "collabo.common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -718,11 +753,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\POCRoot\\Collabo\\Collabo.Console\\Collabo.Console.csproj",
+      "projectUniqueName": "D:\\POCRoot\\Collabo\\collabo.consoleapp\\Collabo.Console.csproj",
       "projectName": "Collabo.Console",
-      "projectPath": "D:\\POCRoot\\Collabo\\Collabo.Console\\Collabo.Console.csproj",
+      "projectPath": "D:\\POCRoot\\Collabo\\collabo.consoleapp\\Collabo.Console.csproj",
       "packagesPath": "C:\\Users\\Satish\\.nuget\\packages\\",
-      "outputPath": "D:\\POCRoot\\Collabo\\Collabo.Console\\obj\\",
+      "outputPath": "D:\\POCRoot\\Collabo\\collabo.consoleapp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -743,7 +778,14 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\POCRoot\\Collabo\\collabo.clientservices\\collabo.clientservices.csproj": {
+              "projectPath": "D:\\POCRoot\\Collabo\\collabo.clientservices\\collabo.clientservices.csproj"
+            },
+            "D:\\POCRoot\\Collabo\\collabo.common\\collabo.common.csproj": {
+              "projectPath": "D:\\POCRoot\\Collabo\\collabo.common\\collabo.common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -760,10 +802,6 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
-          },
-          "RestSharp": {
-            "target": "Package",
-            "version": "[106.5.4, )"
           }
         },
         "imports": [

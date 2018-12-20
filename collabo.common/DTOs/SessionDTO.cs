@@ -9,6 +9,10 @@ namespace Collabo.API.DTOs{
         public string UserName { get; set; }
         public DateTime LoggedOn { get; set; }
 
+    public SessionDTO()
+    {
+        
+    }
     public SessionDTO(Session session)
     {
         if(session == null)throw new Exception("Session not available.");

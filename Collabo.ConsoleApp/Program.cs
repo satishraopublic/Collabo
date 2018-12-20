@@ -1,6 +1,6 @@
 ﻿using System;
-using RestSharp;
 using Collabo.API.DTOs;
+using Collabo.ClientServices;
 
 namespace Collabo.ConsoleApp
 {
@@ -8,16 +8,11 @@ namespace Collabo.ConsoleApp
     {
         static void Main(string[] args)
         {
-            var client = new RestClient("http://localhost:10000");
-            var request = new RestRequest("api/session/", Method.POST);
-            request.AddParameter("username", "srao");
-            request.AddParameter("password", "password");
-
-            client.Execute<SessionDTO>(request, response => {
-                SessionDTO dto = response.Data;
-                Console.WriteLine($"Session ID={dto.ID}");
-            });
-
+            string fixHint=null;
+            CollaboClientService.INSTANCE.Configure("http://localhost:10000");
+            SessionDTO dto = CollaboClientService.INSTANCE.Login("srao2","password", out fixHint);
+            if(dto != null) Console.WriteLine($"session token = {dto.ID}");
+            else Console.WriteLine($"Fix Hint: {fixHint}");
             Console.Read();
         }
     }

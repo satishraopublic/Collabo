@@ -4,5 +4,9 @@ namespace collabo.Common
     {
         public int StatusCode { get; set; }
         public string ErrorMessage { get; set; }
+
+        public override string ToString(){
+            return $"Code={StatusCode}, Message={ErrorMessage}";
+        }
     }
 }
