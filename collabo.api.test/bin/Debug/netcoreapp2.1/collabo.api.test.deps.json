@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "04bbcbe81d9bf74f0682fb8eb057300c436ea3d5"
+    "signature": "04157ce899cfed41643cced003fa1d242ef030be"
   },
   "compilationOptions": {},
   "targets": {
@@ -892,6 +892,22 @@
           }
         }
       },
+      "Serilog.Sinks.File/3.1.1": {
+        "dependencies": {
+          "Serilog": "2.7.1",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0",
+          "System.Threading.Timer": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Serilog.Sinks.File.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "3.1.1.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/4.0.1": {
         "dependencies": {
           "Swashbuckle.AspNetCore.Swagger": "4.0.1",
@@ -1458,6 +1474,11 @@
           "System.Runtime.Handles": "4.3.0"
         }
       },
+      "System.Threading.Timer/4.0.1": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Xml.ReaderWriter/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -1609,6 +1630,7 @@
           "Serilog.AspNetCore": "2.1.1",
           "Serilog.Settings.Configuration": "2.6.1",
           "Serilog.Sinks.Console": "3.1.1",
+          "Serilog.Sinks.File": "3.1.1",
           "Swashbuckle.AspNetCore": "4.0.1",
           "collabo.common": "1.0.0",
           "collabo.data": "1.0.0"
@@ -2016,6 +2038,13 @@
       "sha512": "sha512-56mI5AqvyF/i/c2451nvV71kq370XOCE4Uu5qiaJ295sOhMb9q3BWwG7mWLOVSnmpWiq0SBT3SXfgRXGNP6vzA==",
       "path": "serilog.sinks.console/3.1.1",
       "hashPath": "serilog.sinks.console.3.1.1.nupkg.sha512"
+    },
+    "Serilog.Sinks.File/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CLFHaMjjZg3QGxzPiZk6jHQ6Y273L5hI316fe04FfZyNj2OSQPHQz0VjIbQj/iz55yLbMG4eZJSbvrZpUgqraA==",
+      "path": "serilog.sinks.file/3.1.1",
+      "hashPath": "serilog.sinks.file.3.1.1.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/4.0.1": {
       "type": "package",
@@ -2443,6 +2472,13 @@
       "sha512": "sha512-IMXgB5Vf/5Qw1kpoVgJMOvUO1l32aC+qC3OaIZjWJOjvcxuxNWOK2ZTWWYXfij22NHxT2j1yWX5vlAeQWld9vA==",
       "path": "system.threading.threadpool/4.0.10",
       "hashPath": "system.threading.threadpool.4.0.10.nupkg.sha512"
+    },
+    "System.Threading.Timer/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-saGfUV8uqVW6LeURiqxcGhZ24PzuRNaUBtbhVeuUAvky1naH395A/1nY0P2bWvrw/BreRtIB/EzTDkGBpqCwEw==",
+      "path": "system.threading.timer/4.0.1",
+      "hashPath": "system.threading.timer.4.0.1.nupkg.sha512"
     },
     "System.Xml.ReaderWriter/4.3.0": {
       "type": "package",

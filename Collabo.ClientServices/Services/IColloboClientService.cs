@@ -12,13 +12,13 @@ namespace Collabo.ClientServices{
 
 // Session 
         SessionDTO Login(string userName, string password, out string fixHint);
-        bool Logout(Guid sessionId);
+        bool Logout(Guid sessionId, out string fixHint);
 
 //Channels 
 
-        List<ViewChannelDTO> GetAvailableChannels(Guid sessionId);
-        bool AddChannel(Guid sessionId, CreateChannelDTO channel);
-        bool DeleteChannel(Guid sessionId, Guid channelId);
+        List<ViewChannelDTO> GetAvailableChannels(Guid sessionId, out string fixHint);
+        bool AddChannel(Guid sessionId, CreateChannelDTO channel, out string fixHint);
+        bool DeleteChannel(Guid sessionId, Guid channelId, out string fixHint);
 
 // Channel Members
         bool AddMemberToChannel(Guid sessionId, Guid channelId, ChannelMemberDTO member);

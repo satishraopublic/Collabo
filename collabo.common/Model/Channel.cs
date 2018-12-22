@@ -127,7 +127,11 @@ public class ChannelMember{
 
     public DateTime AddedOn {get; set;}
     public DateTime RemovedOn {get; set;}
-    internal ChannelMember(Guid createdBy)
+    
+    public ChannelMember(){
+        
+    }
+    public ChannelMember(Guid createdBy)
     {
         ID = Guid.NewGuid();
         Member = createdBy;

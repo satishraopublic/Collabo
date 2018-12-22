@@ -41,6 +41,11 @@ namespace Collabo.ClientServices{
         {
             
         }
+        public UserViewDTO Register(string firstName, string lastName, string userName, string password, string confirmPassword, string emailID, string secretQuestion, string secretAnswer)
+        {
+            throw new NotImplementedException();
+        }
+
         public SessionDTO Login(string userName, string password,out string fixHint)
         {
             SessionDTO result=null;
@@ -57,53 +62,106 @@ namespace Collabo.ClientServices{
         }
 
 
-        public bool Logout(Guid sessionId)
+        public bool Logout(Guid sessionId, out string fixHint)
         {
-            throw new NotImplementedException();
+            var request = new RestRequest("api/session?token={session}", Method.DELETE);
+            request.AddUrlSegment("session",sessionId);
+            var response2 = _client.Execute(request);
+            if(ProcessResponse(response2, out fixHint)){
+               return true; 
+            }
+            return false;
         }
-        public bool AddChannel(Guid sessionId, CreateChannelDTO channel)
+#region  Channel
+        public List<ViewChannelDTO> GetAvailableChannels(Guid sessionId, out string fixHint)
         {
-            throw new NotImplementedException();
+            var request = new RestRequest("api/channel?token={session}", Method.GET);
+            request.AddUrlSegment("session",sessionId);
+            var response2 = _client.Execute<List<ViewChannelDTO>>(request);
+            if(ProcessResponse(response2, out fixHint)){
+               return response2.Data;
+            }
+            return null;
+        }
+        public bool AddChannel(Guid sessionId, CreateChannelDTO channel, out string fixHint)
+        {
+            var request = new RestRequest("api/channel?token={session}", Method.POST);
+            request.AddUrlSegment("session",sessionId);
+            request.AddHeader("content-type","application/json");
+            request.AddBody(channel);
+            var response2 = _client.Execute(request);
+            if(ProcessResponse(response2, out fixHint)){
+                return true;
+            }
+            return false;
         }
 
-
-        public Guid AddConverserToConversation(Guid sessionId, Guid conversationid, ConverserDTO converser)
+        public bool DeleteChannel(Guid sessionId, Guid channelId, out string fixHint)
         {
-            throw new NotImplementedException();
+            var request = new RestRequest("api/channel?token={session}&channel={channel}", Method.DELETE);
+            request.AddUrlSegment("session",sessionId);
+            request.AddUrlSegment("channel",channelId);
+            var response2 = _client.Execute(request);
+            if(ProcessResponse(response2, out fixHint)){
+               return true; 
+            }
+            return false;
         }
+#endregion Channel
 
+#region Channel Member
         public bool AddMemberToChannel(Guid sessionId, Guid channelId, ChannelMemberDTO member)
         {
+            string fixHint=null;
+            var request = new RestRequest("api/channelmember?token={session}&channel={channel}", Method.POST);
+            request.AddUrlSegment("session",sessionId);
+            request.AddUrlSegment("channel",channelId);
+            request.AddHeader("content-type","application/json");
+            request.AddBody(member);
+            var response2 = _client.Execute(request);
+            if(ProcessResponse(response2, out fixHint)){
+                return true;
+            }
+            return false;
+        }
+        public bool RemoveMemberFromChannel(Guid sessionId, Guid channelId, ChannelMemberDTO member)
+        {
             throw new NotImplementedException();
         }
+#endregion
 
+
+#region  Conversation
+        public List<ViewConversationDTO> GetAllConversations(Guid sessionId)
+        {
+            string fixHint=null;
+            var request = new RestRequest("api/conversation?token={session}", Method.GET);
+            request.AddUrlSegment("session",sessionId);
+            var response2 = _client.Execute<List<ViewConversationDTO>>(request);
+            if(ProcessResponse(response2, out fixHint)){
+               return response2.Data;
+            }
+            return null;
+        }
+        public Guid CreateConversation(Guid sessionId, CreateConversationDTO conversationInfo)
+        {
+            string fixHint=null;
+            var request = new RestRequest("api/conversation?token={session}", Method.POST);
+            request.AddUrlSegment("session",sessionId);
+            request.AddHeader("content-type","application/json");
+            request.AddBody(conversationInfo);
+            var response2 = _client.Execute(request);
+            if(ProcessResponse(response2, out fixHint)){
+            }
+            return Guid.Empty;
+        }
         public bool CloseConversation(Guid sessionId, Guid conversation)
         {
             throw new NotImplementedException();
         }
+#endregion
 
-        public Guid CreateConversation(Guid sessionId, CreateConversationDTO createInfo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool DeleteChannel(Guid sessionId, Guid channelId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<ViewConversationDTO> GetAllConversations(Guid sessionId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<ViewChannelDTO> GetAvailableChannels(Guid sessionId)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public UserViewDTO Register(string firstName, string lastName, string userName, string password, string confirmPassword, string emailID, string secretQuestion, string secretAnswer)
+        public Guid AddConverserToConversation(Guid sessionId, Guid conversationid, ConverserDTO converser)
         {
             throw new NotImplementedException();
         }
@@ -113,10 +171,6 @@ namespace Collabo.ClientServices{
             throw new NotImplementedException();
         }
 
-        public bool RemoveMemberFromChannel(Guid sessionId, Guid channelId, ChannelMemberDTO member)
-        {
-            throw new NotImplementedException();
-        }
  
  //PRIVATE methods
          private void ThrowIfNotConfigured()

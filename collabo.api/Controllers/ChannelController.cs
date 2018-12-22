@@ -37,11 +37,13 @@ namespace Collabo.Controllers
 
         
         [HttpPost]
-        public ActionResult CreateChannel(Guid token, CreateChannelDTO channel){
+        public ActionResult CreateChannel(Guid token, [FromBody]CreateChannelDTO channel){
             Session session = _loginService.ValidateUserContext(token);
+            _logger.LogCritical("Session validated.");
+            _logger.LogCritical($"Create Channel(Name={channel.Name}, Type={channel.Type}).");
             Guid channelId =_dataService.CreateChannel(session.User, channel);
             if(channelId == Guid.Empty) return BadRequest();
-            return Created("", channelId);
+            return Created("https://localhost:5001/api/channel", channelId);
         }
 
         [HttpDelete]

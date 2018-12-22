@@ -16,6 +16,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 using collabo.Common;
+using Microsoft.AspNetCore.Mvc.Formatters;
 
 namespace collabo.api
 {
@@ -31,7 +32,10 @@ namespace collabo.api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc(config=>{
+                config.ReturnHttpNotAcceptable = true;
+                config.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new Info{ Title="Collabo API", Version="v1"});
@@ -44,7 +48,7 @@ namespace collabo.api
             services.AddSingleton<IDataFileService<CollaboDB>>((c)=>{
                 IConfigurationService config = c.GetService<IConfigurationService>();
                 string dbName = config.GetDBConnectionString();
-                return new JSONDataFileService<CollaboDB>(dbName);
+                return new CollaboJSONDataFileService(dbName);
             });
             services.AddSingleton<ICollaboRepository,JSONCollaboRepository>();
         }

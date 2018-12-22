@@ -23,7 +23,7 @@ namespace collabo.api
                 .UseSerilog((hostingContext, loggerConfiguration) => loggerConfiguration
 	                .ReadFrom.Configuration(hostingContext.Configuration)
 	                .Enrich.FromLogContext()
-	                .WriteTo.Console())
+	                .WriteTo.File("d:\\pocroot\\logs\\collabo.api.logs\\log.txt"))
                 .UseStartup<Startup>();
     }
 }
