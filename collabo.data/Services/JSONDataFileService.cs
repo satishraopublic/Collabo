@@ -15,6 +15,7 @@ where T : class, new()
     public JSONDataFileService(string dataFile, JsonConverter converter)
     {
         _dataFile = dataFile;
+        _converter = converter;
     }
     public T GetDB()
     {
