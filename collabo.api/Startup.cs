@@ -70,15 +70,15 @@ namespace collabo.api
             {
                 config.Run(async context =>
                 {
-                    context.Response.StatusCode = 500;
-                    context.Response.ContentType = "application/json";
-        
                     var error = context.Features.Get<IExceptionHandlerFeature>();
                     if (error != null)
                     {
                         var ex = error.Error;
-        
-                        await context.Response.WriteAsync(new ErrorModel{StatusCode = 500,ErrorMessage = ex.Message}.ToString()); //ToString() is overridden to Serialize object
+                        ICollaboStatusException ex1 = ExceptionHandler.Handle(ex);
+                        context.Response.StatusCode = ex1.StatusCode;
+                        context.Response.ContentType = "application/json";
+
+                        await context.Response.WriteAsync(ex1.StatusMessage); 
                     }
                 });
             });

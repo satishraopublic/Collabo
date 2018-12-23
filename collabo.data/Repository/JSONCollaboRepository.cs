@@ -45,7 +45,7 @@ public class JSONCollaboRepository : ICollaboRepository
     {
         User loggedUser = _db.Users.FirstOrDefault(c=>string.Equals(c.UserName , userName) 
                                     && string.Equals(c.Password, password, StringComparison.InvariantCultureIgnoreCase));
-        if(loggedUser == null) throw new Exception("Access Denied.");
+        if(loggedUser == null) throw new ForbiddenException("Access Denied.");
         if(!_db.Sessions.ContainsKey(loggedUser.ID)){
             _db.Sessions.Add(loggedUser.ID, new List<Session>());
         }

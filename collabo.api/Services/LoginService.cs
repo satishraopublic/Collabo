@@ -20,7 +20,7 @@ public class LoginService : ILoginService
     public Session ValidateUserContext(Guid token)
     {
         Session session = _loggedUsers.FirstOrDefault(c=> c.ID == token);
-        if(session == null) throw new Exception("Access Denied.");
+        if(session == null) throw new ForbiddenException("Access Denied.");
         return session;
     }
 }
