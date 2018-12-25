@@ -31,5 +31,7 @@ public interface  ICollaboRepository{
         bool TryDeleteChannel(Guid user, Guid channelId, out string message);
         bool TryAddMemberToChannel(Guid user, Guid channelId, Guid member, out string message);
         bool TryRemoveMemberFromChannel(Guid user, Guid channelId, Guid member, out string message);
+        List<UserDTO> GetAllAvailableUsers(Guid user);
+        List<UserViewDTO> GetAllMembersForChannel(Guid channelId);
     }
 }

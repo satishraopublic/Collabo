@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Collabo.API.DTOs;
 using Collabo.Common;
+using Collabo.Common.DTOs;
 
 namespace Collabo.API.Services{
 
@@ -18,9 +19,11 @@ namespace Collabo.API.Services{
         Conversation GetConversation(Guid conversation);
         List<IChannel> GetAllActiveChannelsForUser(Guid user);
         Guid CreateChannel(Guid user, CreateChannelDTO channel);
+        List<UserViewDTO> GetAllMembersForChannel(Guid channelId);
         bool TryDeleteChannel(Guid user, Guid channel, out string message);
         bool TryAddMemberToChannel(Guid user, Guid channelId, Guid member, out string message);
         bool TryRemoveMemberFromChannel(Guid user, Guid channelId, Guid member, out string message);
         bool Logout(Guid user, Guid iD);
+        List<UserDTO> GetAllAvailableUsers(Guid user);
     }
 }

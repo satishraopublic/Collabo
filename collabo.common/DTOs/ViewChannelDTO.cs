@@ -14,6 +14,7 @@ namespace Collabo.API.DTOs{
 
     public ViewChannelDTO(IChannel channel)
     {
+        if(channel != null){
         ID = channel.ID;
         CreatedBy = channel.CreatedBy;
         CreatedOn  = channel.CreatedOn;
@@ -22,6 +23,10 @@ namespace Collabo.API.DTOs{
         UpdatedOn = channel.UpdatedOn;
         ClosedOn = channel.ClosedOn;
         NumberOfParticipants = channel.CurrentMembers?.Count??0;
+        }
+        else{
+            throw new Exception("Channel not available.");
+        }
     }
 }
 }

@@ -61,7 +61,7 @@ namespace Collabo.Controllers
             List<ViewChannelDTO> result = new List<ViewChannelDTO>();
             if(userChannels?.Any() == true){
                 foreach(IChannel channel in userChannels){
-                    result.Add(new ViewChannelDTO(channel));
+                    if(channel != null) result.Add(new ViewChannelDTO(channel));
                 }
             }
             return result;

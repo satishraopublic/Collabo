@@ -6,7 +6,7 @@ namespace Collabo.Common
 {
 public static class ChannelFactory{
 
-    public static Channel CreateChannel(Guid createdBy, ChannelType type, string name= null){
+    public static IChannel CreateChannel(Guid createdBy, ChannelType type, string name= null){
         
         if(createdBy == Guid.Empty) throw new Exception("Invalid user. Cannot create channel.");
 
@@ -14,15 +14,27 @@ public static class ChannelFactory{
 
         switch(type){
             case ChannelType.Named:
-                return new NamedChannel(name, createdBy);
+                IChannel nChannel = new NamedChannel(){
+                    ID = Guid.NewGuid(),
+                    Name = name,
+                    CreatedBy = createdBy,
+                    CreatedOn = DateTime.UtcNow,
+                };
+                return nChannel;
             case ChannelType.Temporary:
-                return new TemporaryChannel(createdBy);
+                IChannel tChannel = new TemporaryChannel(){
+                    ID = Guid.NewGuid(),
+                    Name = name,
+                    CreatedBy = createdBy,
+                    CreatedOn = DateTime.UtcNow,
+                };
+                return tChannel;
             default:
                 throw new Exception("Unknown channel type requested.");
         }
     }
 
-    public static Channel CreateChannel(Guid createdBy, string name= null){
+    public static IChannel CreateChannel(Guid createdBy, string name= null){
         ChannelType type= ChannelType.None;
         
         if(string.IsNullOrWhiteSpace(name)) type = ChannelType.Temporary;
@@ -37,31 +49,20 @@ public enum ChannelType{
 }
 
 public class NamedChannel:Channel{
-    public NamedChannel(string name, Guid createdBy):base(createdBy)
-    {
-        Name = name;
-        CreatedBy = createdBy;
-        CreatedOn = DateTime.UtcNow;
+    public NamedChannel(){
         Type = ChannelType.Named;
     }
-
 }
 
 public class TemporaryChannel:Channel{
-    public TemporaryChannel(Guid createdBy):base(createdBy)
-    {
-        CreatedOn = DateTime.UtcNow;
-        Name=$"Channel created by {CreatedBy} on {CreatedOn}";
+    public TemporaryChannel(){
         Type = ChannelType.Temporary;
     }
 }
 public abstract class Channel : IChannel
 {
-    protected Channel(Guid createdBy){
-        ID = Guid.NewGuid();
-        CreatedBy = createdBy;
+    protected Channel(){
         CurrentMembers = new List<ChannelMember>();
-        CurrentMembers.Add(new ChannelMember(createdBy));
     }
     private ChannelType _type;
     public ChannelType Type
@@ -78,18 +79,18 @@ public abstract class Channel : IChannel
         }
     }
     
-    public Guid ID { get; protected set; }
-    public string Name { get; protected set; }
+    public Guid ID { get;  set; }
+    public string Name { get;  set; }
 
-    public Guid CreatedBy { get; protected set; }
-    public DateTime CreatedOn { get; protected set; }
-    public DateTime UpdatedOn { get; protected set; }
-    public DateTime ClosedOn { get; protected set; }
+    public Guid CreatedBy { get;  set; }
+    public DateTime CreatedOn { get;  set; }
+    public DateTime UpdatedOn { get;  set; }
+    public DateTime ClosedOn { get;  set; }
 
     public List<ChannelMember> CurrentMembers { get; set; }
     public List<ChannelMember> RemovedMembers {get; set;}
     public Guid AddMember(Guid member){
-        ChannelMember newMember = new ChannelMember(member);
+        ChannelMember newMember = new ChannelMember(Guid.NewGuid(), member);
        CurrentMembers.Add(newMember);
        return newMember.ID;
     }
@@ -131,9 +132,9 @@ public class ChannelMember{
     public ChannelMember(){
         
     }
-    public ChannelMember(Guid createdBy)
+    public ChannelMember(Guid id, Guid createdBy)
     {
-        ID = Guid.NewGuid();
+        ID = id;
         Member = createdBy;
         AddedOn = DateTime.UtcNow;
     }

@@ -214,8 +214,10 @@ public class JSONCollaboRepository : ICollaboRepository
         {
             return _db.Channels?.Where((c)=>
             {
-                if(c.CreatedBy == user) return true;
-                if(c.CurrentMembers.Any(d=>d.Member == user)) return true;
+                if(c != null){
+                    if(c.CreatedBy == user) return true;
+                    if(c.CurrentMembers.Any(d=>d.Member == user)) return true;
+                }
                 return false;
             })?.ToList();
         }
@@ -288,6 +290,30 @@ public class JSONCollaboRepository : ICollaboRepository
             channel.RemoveMember(member);
             _dataFileService.SaveDB(_db);
             return true;
+        }
+
+        public List<UserDTO> GetAllAvailableUsers(Guid user)
+        {
+            List<UserDTO> result = new List<UserDTO>();
+            foreach(User usr in _db.Users){
+                    result.Add(new UserDTO(usr));
+            }
+            return result;
+        }
+
+        public List<UserViewDTO> GetAllMembersForChannel(Guid channelId)
+        {
+            List<UserViewDTO> result=new List<UserViewDTO>();
+            IChannel channel = _db.Channels.FirstOrDefault(c=>c.ID == channelId);
+            if(channel?.CurrentMembers?.Any() == true){
+                foreach(ChannelMember member in channel.CurrentMembers){
+                    User user = _db.Users.FirstOrDefault(c=>c.ID == member.Member);
+                    if(user != null){
+                        result.Add(new UserViewDTO(user));
+                    }
+                }
+            }
+            return result;
         }
     }
 }

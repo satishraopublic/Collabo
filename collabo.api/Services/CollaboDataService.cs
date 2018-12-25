@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Collabo.API.DTOs;
 using Collabo.Common;
+using Collabo.Common.DTOs;
 using Collabo.Data;
 using Microsoft.Extensions.Logging;
 
@@ -94,6 +95,16 @@ namespace Collabo.API.Services{
                 _logger.LogError(ex, ex.Message);
                 return false;
             }
+        }
+
+        public List<UserDTO> GetAllAvailableUsers(Guid user)
+        {
+            return _repo.GetAllAvailableUsers(user);
+        }
+
+        public List<UserViewDTO> GetAllMembersForChannel(Guid channelId)
+        {
+            return _repo.GetAllMembersForChannel(channelId);
         }
     }
 }

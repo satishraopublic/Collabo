@@ -4,6 +4,7 @@ using System.Linq;
 using Collabo.API.DTOs;
 using Collabo.API.Services;
 using Collabo.Common;
+using Collabo.Common.DTOs;
 using Collabo.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -24,7 +25,15 @@ namespace Collabo.Controllers
             _logger = logger;
         }
 
-                [HttpPost]
+        [HttpGet]
+        public IActionResult ListChannelMembers(Guid token, Guid channelId){
+            Session session = _loginService.ValidateUserContext(token);
+            List<UserViewDTO> users = _dataService.GetAllMembersForChannel(channelId);
+            return Ok(users);
+        }
+
+
+        [HttpPost]
         public ActionResult AddMemberToChannel(Guid token, Guid channelId, [FromBody]ChannelMemberDTO channelMember){
             Session session = _loginService.ValidateUserContext(token);
             string message = null;
